@@ -38,7 +38,7 @@ node prepare.js -r $NEW_VERSION -o
 echo "prepare finish !!!"
 ###build app over###
 
-OUTPUT_PATH=/Users/mac5/Documents/gen_app/app\(${NEW_VERSION}\)_$(date +"%m%d_%H%M%S")
+OUTPUT_PATH=/Users/mac5/Documents/gen_app/app\(${NEW_VERSION}\)_P4_$(date +"%m%d_%H%M")
 echo "build app start !!!"
 ###apk###
 ##tcb.R=>tcbdev.R
