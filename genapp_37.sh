@@ -14,10 +14,11 @@ SOURCE_HOME=$(get_source_home $arg1)
 echo $SOURCE_HOME
 read -p "請輸入版本: " NEW_VERSION
 echo "version: " $NEW_VERSION
-###更改環境設定-26###
-sed -i '' 's/https"/http"/g' $SOURCE_HOME/config/cordova/uat/config.xml
-sed -i '' 's/mbbank.tcb-test.com.tw"/210.200.4.11"/g' $SOURCE_HOME/config/cordova/uat/config.xml
-sed -i '' 's#https://mbbank\.tcb-test\.com\.tw/NMobileBank#http://210.200.4.11/MobileBankDev_P4#g' environment/environment.sit.ts
+
+ ###更改環境設定-37###
+sed -i '' 's/http"/https"/g' $SOURCE_HOME/config/cordova/uat/config.xml
+sed -i '' 's/210.200.4.11"/mbbank.tcb-test.com.tw"/g' $SOURCE_HOME/config/cordova/uat/config.xml
+sed -i '' 's#http://210\.200\.4\.11/MobileBankDev_P4#https://mbbank.tcb-test.com.tw/NMobileBank#g' $SOURCE_HOME/web_resource/src/environments/environment.sit.ts
 
 if [ -z "$NEW_VERSION" ];  then
     ###get version###

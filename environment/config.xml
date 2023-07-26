@@ -1,0 +1,204 @@
+<?xml version='1.0' encoding='utf-8'?>
+<widget android-packageName="com.mitake.android.bk.tcbdev" ios-CFBundleIdentifier="tw.com.tcb-bank.mbbank.uat" version="3.21.0331" android-versionCode="103" ios-CFBundleVersion="3.21.0331" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0">
+    <name>tcbb-mobile-bank</name>
+    <description>
+        A sample Apache Cordova application that responds to the deviceready event.
+    </description>
+    <author email="dev@cordova.apache.org" href="http://cordova.io">
+        Apache Cordova Team
+    </author>
+    <content src="index.html" />
+    <access origin="*" />
+    <preference name="WebViewBounce" value="false" />
+    <preference name="DisallowOverscroll" value="true" />
+    <preference name="StatusBarOverlaysWebView" value="false" />
+    <preference name="StatusBarBackgroundColor" value="#000000" />
+    <preference name="StatusBarStyle" value="lightcontent" />
+    <preference name="orientation" value="portrait" />
+    <preference name="SplashScreenDelay" value="3000" />
+    <preference name="AndroidLaunchMode" value="singleTask" />
+    <preference name="AutoHideSplashScreen" value="true" />
+    <preference name="FadeSplashScreen" value="true" />
+    <preference name="ShowSplashScreenSpinner" value="true" />
+    <preference name="CrosswalkAnimatable" value="true" />
+    <preference name="GOOGLE_MAPS_ANDROID_API_KEY" value="AIzaSyBIp-p78B1drBVQ6Tb1EsY0MNJSfkp3jnE" />
+    <allow-intent href="http://*/*" />
+    <allow-intent href="https://*/*" />
+    <allow-intent href="tel:*" />
+    <allow-intent href="sms:*" />
+    <allow-intent href="mailto:*" />
+    <allow-intent href="geo:*" />
+    <platform name="android">
+        <icon density="ldpi" src="res/icon/android/ldpi.png" />
+        <icon density="mdpi" src="res/icon/android/mdpi.png" />
+        <icon density="hdpi" src="res/icon/android/hdpi.png" />
+        <icon density="xhdpi" src="res/icon/android/xhdpi.png" />
+        <resource-file src="res/file/SystemWebViewEngine.java" target="CordovaLib/src/org/apache/cordova/engine/SystemWebViewEngine.java" />
+        <resource-file src="res/file/gradle-wrapper.properties" target="gradle/wrapper/gradle-wrapper.properties" />
+        <splash density="port-hdpi" src="res/screen/android/screen-hdpi-portrait.png" />
+        <splash density="port-ldpi" src="res/screen/android/screen-ldpi-portrait.png" />
+        <splash density="port-mdpi" src="res/screen/android/screen-mdpi-portrait.png" />
+        <splash density="port-xhdpi" src="res/screen/android/screen-xhdpi-portrait.png" />
+        <allow-intent href="market:*" />
+        <!--For Test Env-->
+        <edit-config xmlns:android="http://schemas.android.com/apk/res/android" file="app/src/main/AndroidManifest.xml" mode="merge" target="/manifest/application">
+            <application android:networkSecurityConfig="@xml/network_security_config" />
+        </edit-config>
+        <resource-file src="res/xml/network_security_config.xml" target="app/src/main/res/xml/network_security_config.xml" />
+        <!--For Test Env-->
+        <preference name="android-minSdkVersion" value="23" />
+        <preference name="android-targetSdkVersion" value="31" />
+        <preference name="scheme" value="http" />
+        <preference name="hostname" value="210.200.4.11" />
+        <preference name="AndroidXEnabled" value="true" />
+    </platform>
+    <platform name="ios">
+        <!-- <allow-navigation href="file:///*" /> -->
+        <preference name="iosScheme" value="file" />
+        <preference name="WKPort" value="0" />
+        <preference name="MIGRATE_STORAGE_ORIGINAL_SCHEME" value="file" />
+        <preference name="MIGRATE_STORAGE_ORIGINAL_HOSTNAME" value="" />
+        <preference name="MIGRATE_STORAGE_ORIGINAL_PORT_NUMBER" value="0" />
+        <allow-intent href="itms:*" />
+        <allow-intent href="itms-apps:*" />
+        <icon height="180" src="res/icon/ios/icon-60@3x.png" width="180" />
+        <icon height="60" src="res/icon/ios/icon-60.png" width="60" />
+        <icon height="120" src="res/icon/ios/icon-60@2x.png" width="120" />
+        <icon height="76" src="res/icon/ios/icon-76.png" width="76" />
+        <icon height="152" src="res/icon/ios/icon-76@2x.png" width="152" />
+        <icon height="20" src="res/icon/ios/icon-small-20.png" width="20" />
+        <icon height="40" src="res/icon/ios/icon-small-40.png" width="40" />
+        <icon height="80" src="res/icon/ios/icon-small-40@2x.png" width="80" />
+        <icon height="88" src="res/icon/ios/icon-44@2x.png" width="88" />
+        <icon height="57" src="res/icon/ios/icon.png" width="57" />
+        <icon height="114" src="res/icon/ios/icon@2x.png" width="114" />
+        <icon height="72" src="res/icon/ios/icon-72.png" width="72" />
+        <icon height="144" src="res/icon/ios/icon-72@2x.png" width="144" />
+        <icon height="76" src="res/icon/ios/icon-76.png" width="76" />
+        <icon height="152" src="res/icon/ios/icon-76@2x.png" width="152" />
+        <icon height="167" src="res/icon/ios/icon-83.5@2x.png" width="167" />
+        <icon height="29" src="res/icon/ios/icon-small.png" width="29" />
+        <icon height="58" src="res/icon/ios/icon-small@2x.png" width="58" />
+        <icon height="87" src="res/icon/ios/icon-small@3x.png" width="87" />
+        <icon height="50" src="res/icon/ios/icon-small-50.png" width="50" />
+        <icon height="100" src="res/icon/ios/icon-small-50@2x.png" width="100" />
+        <icon height="1024" src="res/icon/ios/icon-1024.png" width="1024" />
+        <splash height="480" src="res/screen/ios/screen-iphone-portrait.png" width="320" />
+        <splash height="960" src="res/screen/ios/screen-iphone-portrait-2x.png" width="640" />
+        <splash height="1136" src="res/screen/ios/screen-iphone-portrait-568h-2x.png" width="640" />
+        <splash height="1334" src="res/screen/ios/screen-iphone-portrait-2x.png" width="750" />
+        <splash height="2208" src="res/screen/ios/screen-iphone-portrait-2x.png" width="1242" />
+        <splash height="1242" src="res/screen/ios/screen-iphone-portrait-2x.png" width="2208" />
+        <splash height="2436" src="res/screen/ios/default-iOS11-812h@3x.png" width="1125" />
+        <splash height="1125" src="res/screen/ios/default-iOS11-812h@3x.png" width="2436" />
+        <config-file parent="CFBundleLocalizations" target="*-Info.plist">
+            <array>
+                <string>zh_TW</string>
+            </array>
+        </config-file>
+        <config-file parent="CFBundleDevelopmentRegion" target="*-Info.plist">
+            <string>zh_TW</string>
+        </config-file>
+        <config-file parent="LSApplicationQueriesSchemes" target="*-Info.plist">
+            <array>
+                <string>touchstocktbs</string>
+                <string>twmphcetaiwanpay</string>
+                <string>TCBmATM</string>
+            </array>
+        </config-file>
+        <config-file parent="UIApplicationShortcutItems" target="*-Info.plist">
+            <array>
+              <dict>
+                <key>UIApplicationShortcutItemIconType</key>
+                <string>UIApplicationShortcutIconTypeFavorite</string>
+                <key>UIApplicationShortcutItemTitle</key>
+                <string>出示付款碼</string>
+                <key>UIApplicationShortcutItemType</key>
+                <string>iTCBMobileBank://qrcodeShowPayFromHome</string>
+              </dict>
+              <dict>
+                <key>UIApplicationShortcutItemIconType</key>
+                <string>UIApplicationShortcutIconTypeFavorite</string>
+                <key>UIApplicationShortcutItemTitle</key>
+                <string>出示收款碼</string>
+                <key>UIApplicationShortcutItemType</key>
+                <string>iTCBMobileBank://qrcodeShowReceipt</string>
+              </dict>
+              <dict>
+                <key>UIApplicationShortcutItemIconType</key>
+                <string>UIApplicationShortcutIconTypeFavorite</string>
+                <key>UIApplicationShortcutItemTitle</key>
+                <string>掃描QRCode</string>
+                <key>UIApplicationShortcutItemType</key>
+                <string>iTCBMobileBank://epayscan</string>
+              </dict>
+            </array>
+        </config-file>
+        <config-file parent="NSContactsUsageDescription" target="*-Info.plist">
+            <string>need contacts access to search friends</string>
+        </config-file>
+        <preference name="UseSwiftLanguageVersion" value="4.0" />
+        <preference name="InterceptRemoteRequests" value="all" />
+        <preference name="WKWebViewOnly" value="true" />
+        <preference name="GOOGLE_MAPS_ANDROID_API_KEY" value="AIzaSyBIp-p78B1drBVQ6Tb1EsY0MNJSfkp3jnE" />
+        <preference name="GOOGLE_MAPS_IOS_API_KEY" value="AIzaSyBIp-p78B1drBVQ6Tb1EsY0MNJSfkp3jnE" />
+    </platform>
+    <allow-intent href="*" />
+    <access origin="*" />
+    <engine name="ios" spec="^5.1.1" />
+    <engine name="android" spec="^10.0.0" />
+    <plugin name="cordova-plugin-splashscreen" spec="../cordova_plugin/cordova-plugin-splashscreen" />
+    <plugin name="com-hitrust-plugin-device" spec="../cordova_plugin/com-hitrust-plugin-device" />
+    <plugin name="com-tcbbank-plugin-crypto" spec="../cordova_plugin/com-tcbbank-plugin-crypto" />
+    <plugin name="com-hitrust-plugin-tcbb" spec="../cordova_plugin/com-hitrust-plugin-tcbb" />
+    <plugin name="com.lampa.startapp" spec="6.1.6" />
+    <plugin name="com-hitrust-biometric-plugin" spec="../cordova_plugin/HiBiometricAuthCordovaPlugin">
+        <variable name="FACEID_USAGE_DESCRIPTION" value=" " />
+    </plugin>
+    <plugin name="com-hitrust-plugin-verify-server" spec="../cordova_plugin/com-hitrust-plugin-verify-server" />
+    <plugin name="cordova-plugin-trusted-device" spec="../cordova_plugin/cordova-plugin-trusted-device-master" />
+    <plugin name="cordova-plugin-exit" spec="../cordova_plugin/cordova-plugin-exit-master" />
+    <plugin name="cordova-plugin-zip" spec="../cordova_plugin/cordova-plugin-zip" />
+    <plugin name="cordova-plugin-file" spec="../cordova_plugin/cordova-plugin-file" />
+    <plugin name="cordova-plugin-file-transfer" spec="../cordova_plugin/cordova-plugin-file-transfer" />
+    <plugin name="cordova-plugin-qrscanner" spec="../cordova_plugin/cordova-plugin-qrscanner" />
+    <plugin name="com-hitrust-plugin-screenshot" spec="../cordova_plugin/com-hitrust-plugin-screenshot" />
+    <plugin name="cordova-plugin-x-socialsharing" spec="../cordova_plugin/cordova-plugin-x-socialsharing" />
+    <plugin name="cordova-plugin-geolocation" spec="../cordova_plugin/cordova-plugin-geolocation">
+        <variable name="GEOLOCATION_USAGE_DESCRIPTION" value=" " />
+    </plugin>
+    <plugin name="cordova-plugin-localization-strings" spec="3.1.0">
+        <variable name="TRANSLATION_PATH" value="translations/uat/" />
+    </plugin>
+    <plugin name="phonegap-plugin-mobile-accessibility" spec="../cordova_plugin/phonegap-plugin-mobile-accessibility" />
+    <plugin name="cordova-plugin-inappbrowser" spec="../cordova_plugin/cordova-plugin-inappbrowser" />
+    <plugin name="cordova-plugin-ios-disableshaketoedit" spec="1.0.0" />
+    <plugin name="cordova-sqlite-storage" spec="../cordova_plugin/cordova-sqlite-storage" />
+    <plugin name="cordova-plugin-customurlscheme" spec="../cordova_plugin/cordova-plugin-multiple-customurlscheme">
+        <variable name="URL_SCHEME" value="iTCBMobileBank" />
+        <variable name="SECOND_URL_SCHEME" value="iTCBLaunchFromAPP" />
+        <variable name="THIRD_URL_SCHEME" value="iTCBLaunchFromATM" />
+        <variable name="FOUR_URL_SCHEME" value="iTCBLaunchFromPayBill" />
+        <variable name="FIVE_URL_SCHEME" value="twqrp-00601" />
+    </plugin>
+    <plugin name="cordova-plugin-statusbar" spec="2.4.2" />
+    <plugin name="com-hitrust-plugin-PushNotification" spec="../cordova_plugin/com-hitrust-plugin-push" />
+    <plugin name="com.darktalker.cordova.screenshot" spec="../cordova_plugin/cordova-screenshot" />
+    <plugin name="cordova-plugin-camera" spec="../cordova_plugin/cordova-plugin-camera" />
+	<plugin name="com.ourcodeworld.preventscreenshots" spec="../cordova_plugin/com.ourcodeworld.preventscreenshots" />
+    <plugin name="cordova-plugin-shortcuts-android" spec="../cordova_plugin/cordova-plugin-shortcuts-android-master" />
+    <plugin name="cordova-plugin-network-information" spec="../cordova_plugin/cordova-plugin-network-information-2.0.2" />
+    <plugin name="cordova-plugin-3dtouch-shortcutitems" spec="../cordova_plugin/cordova-plugin-3dtouch-shortcutitems-master" />
+    <plugin name="cordova-plugin-certificates" spec="0.6.4" />
+    <plugin name="cordova-plugin-restartapp" spec="../cordova_plugin/cordova-plugin-restartapp" />
+    <plugin name="cordova-plugin-brightness" spec="../cordova_plugin/cordova-plugin-brightness" />
+    <plugin name="cordova-plugin-contacts" spec="../cordova_plugin/cordova-plugin-contacts-master" />
+    <plugin name="cordova-plugin-speechrecognition" spec="../cordova_plugin/cordova-plugin-speechrecognition" />
+    <plugin name="cordova-plugin-wkwebview-engine" spec="../cordova_plugin/cordova-plugin-wkwebview-engine" />
+    <plugin name="cordova-plugin-wkwebview-file-xhr" spec="../cordova_plugin/cordova-plugin-wkwebview-file-xhr" />
+    <plugin name="com-hitrust-plugin-url-redirect" spec="../cordova_plugin/com-hitrust-plugin-url-redirect" />
+    <plugin name="cordova-plugin-ionic-migrate-ios-storage" spec="../cordova-plugin-ionic-migrate-ios-storage" />
+    <plugin name="cordova-plugin-androidx-adapter" spec="../cordova_plugin/cordova-plugin-androidx-adapter" />
+    <plugin name="cordova-plugin-advanced-geolocation" spec="../cordova_plugin/cordova-plugin-advanced-geolocation" />
+    <plugin name="cordova-plugin-ionic-migrate-storage" spec="../cordova_plugin/cordova-plugin-ionic-migrate-storage" />
+</widget>
