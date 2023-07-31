@@ -1,5 +1,9 @@
 #!/bin/bash
-read -p "請輸入版本: " VERSION
+read -p "請輸入版本: " input
+VERSION=$input
+if [[ "$input" != *.* ]]; then
+  VERSION="${input%?}.${input: -1}"
+fi
 directory=$(find /Users/mac5/Documents/GitHub/gen_app -type d -name "*$VERSION*" | head -n 1 )
 
 # 检查是否找到目录
