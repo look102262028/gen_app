@@ -1,17 +1,17 @@
 #!/bin/bash
-VERSION_PATH=/Users/mac5/Documents/gen_app/version.txt
+VERSION_PATH=/Users/mac5/Documents/GitHub/gen_app/version.txt
 
 # 有傳進來版本號使用參數 沒有從txt取得
 if [ $# -gt 0 ]; then
     LAST_VERSION = $1
     # 找指定版本的目錄 
-    dirs=$(find /Users/mac5/Documents/gen_app -type d -name "*$VERSION*" | head -n 1 )
+    dirs=$(find /Users/mac5/Documents/GitHub/gen_app -type d -name "*$VERSION*" | head -n 1 )
     latest_dir=$(echo $dirs | awk '{print $1}')
     echo "指定建立的目錄是：$latest_dir"
 else
     LAST_VERSION=$(tail -n 1 $VERSION_PATH)  
     # 找最後一個目錄 
-    dirs=$(find /Users/mac5/Documents/gen_app/ -type d -name 'app*' -print0 | xargs -0 ls -td)
+    dirs=$(find /Users/mac5/Documents/GitHub/gen_app/ -type d -name 'app*' -print0 | xargs -0 ls -td)
     latest_dir=$(echo $dirs | awk '{print $1}')
     echo "最晚建立的目錄是：$latest_dir"
 fi

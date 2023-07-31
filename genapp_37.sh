@@ -22,7 +22,7 @@ sed -i '' 's#http://210\.200\.4\.11/MobileBankDev_P4#https://mbbank.tcb-test.com
 
 if [ -z "$NEW_VERSION" ];  then
     ###get version###
-    VERSION_PATH=/Users/mac5/Documents/gen_app/version.txt
+    VERSION_PATH=/Users/mac5/Documents/GitHub/gen_app/version.txt
     LAST_VERSION=$(tail -n 1 $VERSION_PATH)     
     NEW_VERSION=$(echo "scale=2; $LAST_VERSION+0.1" | bc)
     echo 'NEW_VERSION: '$NEW_VERSION
@@ -39,7 +39,7 @@ node prepare.js -r $NEW_VERSION -o
 echo "prepare finish !!!"
 ###build app over###
 
-OUTPUT_PATH=/Users/mac5/Documents/gen_app/app\(${NEW_VERSION}\)_37_$(date +"%m%d_%H%M")
+OUTPUT_PATH=/Users/mac5/Documents/GitHub/gen_app/app/app\(${NEW_VERSION}\)_37_$(date +"%m%d_%H%M")
 echo "build app start !!!"
 ###apk###
 ##tcb.R=>tcbdev.R
@@ -65,7 +65,7 @@ echo "[ Build Info ] Archive......"
 xcodebuild archive -scheme tcbb-mobile-bank -target tcbb-mobile-bank -archivePath ./ht_build/tcb_build_tag.xcarchive
 # Export  archive
 echo "[ Build Info ] Export Archive......"
-xcodebuild -exportArchive -archivePath ./ht_build/tcb_build_tag.xcarchive -exportOptionsPlist /Users/mac5/Documents/gen_app/ExportOptions.plist -exportPath $OUTPUT_PATH
+xcodebuild -exportArchive -archivePath ./ht_build/tcb_build_tag.xcarchive -exportOptionsPlist /Users/mac5/Documents/GitHub/gen_app/ExportOptions.plist -exportPath $OUTPUT_PATH
 echo "export Archive finish..."
 rm $OUTPUT_PATH/*.plist
 rm $OUTPUT_PATH/*.log
@@ -73,6 +73,6 @@ rm -rf ht_build
 open $OUTPUT_PATH
 
 ##build app to phone
-cd /Users/mac5/Documents/gen_app
+cd /Users/mac5/Documents/GitHub/gen_app
 ./installapp.sh $NEW_VERSION
 
