@@ -12,6 +12,7 @@ export const environment = {
   CERT_CHECK: false,
   NATIVE: true, // 是否build到手機上測試
   LANGUAGE: true, // 啟動語系變更功能
+  CLOSE_CHECK_USBDEBUGGER: true, // 關閉USB偵錯模式: true 不檢查, false 檢查
   GOOGLE_MAP_API_KEY: 'AIzaSyBIp-p78B1drBVQ6Tb1EsY0MNJSfkp3jnE',
   AD_SLIDE_SPEED: 5000,
   AUTOLOGOUT_TIME: 600,  // 自動登出時間(秒)

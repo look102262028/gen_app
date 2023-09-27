@@ -48,7 +48,6 @@ else
 fi
 
 APP_BUNDLE_ID="tw.com.tcb-bank.mbbank.uat"
-IOS_INSTALLED=0
 # 檢查 iOS 設備是否連接成功
 if [ "$(idevice_id -l | wc -l)"  -eq 1 ]; then
   # 移除舊ＡＰＰ
@@ -59,7 +58,6 @@ if [ "$(idevice_id -l | wc -l)"  -eq 1 ]; then
   # 安裝 iOS IPA
   ideviceinstaller -i $latest_dir/tcbb-mobile-bank.ipa
   echo "install ipa finish-"$LAST_VERSION
-  IOS_INSTALLED=1
 else 
    echo "iOS 設備未連接，請先連接設備後再執行。"
 fi

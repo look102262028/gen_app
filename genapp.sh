@@ -18,6 +18,7 @@ echo "version: " $NEW_VERSION
 sed -i '' 's/https"/http"/g' $SOURCE_HOME/config/cordova/uat/config.xml
 sed -i '' 's/mbbank.tcb-test.com.tw"/210.200.4.11"/g' $SOURCE_HOME/config/cordova/uat/config.xml
 sed -i '' 's#https://mbbank\.tcb-test\.com\.tw/NMobileBank#http://210.200.4.11/MobileBankDev_P4#g' $SOURCE_HOME/web_resource/src/environments/environment.sit.ts
+sed -i '' 's/CLOSE_CHECK_USBDEBUGGER: false/CLOSE_CHECK_USBDEBUGGER: true/g' $SOURCE_HOME/web_resource/src/environments/environment.sit.ts
 
 if [ -z "$NEW_VERSION" ];  then
     ###get version###
